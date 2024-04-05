@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlumgollumMainPage</title>
+    <link rel="stylesheet" th:href="@{OlumGollumMainPage.css}">
+</head>
+<body class="container">
+<h1 class="title">Olumgollum</h1>
+<div class="button-container">
+    <div class="button-row">
+        <a th:href="@{/OlumGollum/RoomInsert}">
+            <button>방 올룸</button>
+        </a>
+        <a th:href="register.html">
+            <button>방 골룸</button>
+        </a>
+    </div>
+    <div class="button-row">
+        <a th:href="user_info.html">
+            <button>마이페이지</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

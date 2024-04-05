@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container">
+<div class="form-container">
+    <h1>방 등록하는 페이지</h1>
+    <form th:action="@{/OlumGollum/RoomInsert}" th:object="${RoomInfoVos}" method="post">
+        <div>
+            <label for="photo_url">사진 url</label>
+            <input type="text" id="photo_url" th:field="*{photo_url}" />
+        </div>
+        <div>
+            <label for="trade_method">거래방식(매매,전세,월세)</label>
+            <input type="text" id="trade_method" th:field="*{trade_method}" />
+        </div>
+        <div>
+            <label for="deposit">보증금(만원)</label>
+            <input type="text" id="deposit" th:field="*{deposit}" />
+        </div>
+        <div>
+            <label for="monthly">월세(만원)</label>
+            <input type="text" id="monthly" th:field="*{monthly}" />
+        </div>
+        <div>
+            <label for="jeonsegeum">전세금(만원)</label>
+            <input type="text" id="jeonsegeum" th:field="*{jeonsegeum}" />
+        </div>
+        <div>
+            <label for="Sale_price">매매가(만원)</label>
+            <input type="text" id="Sale_price" th:field="*{Sale_price}" />
+        </div>
+        <div>
+            <label for="area">평수</label>
+            <input type="text" id="area" th:field="*{area}" />
+        </div>
+        <div>
+            <label for="accept_date">사용 승인일(YYYY-MM-DD)</label>
+            <input type="date" id="accept_date" th:field="*{accept_date}" />
+        </div>
+        <div>
+            <label for="address">주소</label>
+            <input type="text" id="address" th:field="*{address}" />
+        </div>
+        <div>
+            <label for="floor1">층수</label>
+            <input type="text" id="floor1" th:field="*{floor1}" />
+        </div>
+        <div>
+            <label for="phonenumber">집주인 전화번호(-빼고)</label>
+            <input type="text" id="phonenumber" th:field="*{phonenumber}" />
+        </div>
+        <div>
+            <label for="regit_date">등록일(YYYY-MM-DD)</label>
+            <input type="date" id="regit_date" th:field="*{regit_date}" />
+        </div>
+        <div>
+            <label for="remark">비고(옵션)</label>
+            <input type="text" id="remark" th:field="*{remark}" />
+        </div>
+        <div>
+            <button class="page-button">방 등록</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

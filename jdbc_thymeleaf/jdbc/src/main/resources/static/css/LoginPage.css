@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 60px; /* 패딩을 늘려 컨테이너를 더 크게 만듭니다. */
+  width: 500px; /* 더 큰 너비로 조정합니다. */
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 30px; /* 제목과 입력 필드 사이의 간격을 더욱 넓게 만듭니다. */
+  color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+  width: calc(100% - 20px); /* 내부 요소들의 너비를 조정합니다. */
+  padding: 15px; /* 입력 필드와 버튼의 패딩을 늘립니다. */
+  margin-bottom: 30px; /* 내부 요소들 간의 간격을 늘립니다. */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+.login-container p {
+  margin-top: 30px; /* 가입하기 링크와의 간격을 늘립니다. */
+  font-size: 14px;
+  color: #666;
+}

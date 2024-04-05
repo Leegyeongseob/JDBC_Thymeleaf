@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <!-- CSS 파일 링크를 수정해야 합니다. -->
+    <link rel="stylesheet" th:href="@{/css/LoginPage.css}">
+</head>
+<body>
+<div class="login-container">
+    <h2>로그인</h2>
+    <!-- 로그인 폼의 action을 수정했습니다. -->
+    <form th:action="@{OlumGollum/loginPage}" method="post">
+        <!-- 사용자명 입력 필드 -->
+        <label>
+            <input type="text" placeholder="사용자명" name="Userid">
+        </label>
+        <!-- 비밀번호 입력 필드 -->
+        <label>
+            <input type="password" placeholder="비밀번호" name="Password">
+        </label>
+        <button type="submit">로그인</button>
+    </form>
+    <!-- 회원가입 링크 -->
+    <p>아직 계정이 없으신가요? <a href="../OlumGollum_Olum/OlumGollumMainPage.html">가입하기</a></p>
+    <!-- 로그인 실패 시 오류 메시지 출력 -->
+    <p th:text="${error}" style="color: red"></p>
+</div>
+</body>
+</html>
